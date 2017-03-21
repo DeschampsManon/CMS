@@ -9,6 +9,7 @@ end
 gem 'rails', '~> 5.0.1'
 
 # CSS
+gem 'material_icons'
 gem "sass-rails"
 gem "twitter-bootstrap-rails"
 

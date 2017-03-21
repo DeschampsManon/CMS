@@ -1,0 +1,37 @@
+@import "variables";
+
+#page-builder {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	.main-container{
+		background-color: #fff;
+		border-radius: .4rem;
+		padding-right: 2.5rem;
+		box-shadow: 0 1px 1px rgba(0,0,0,.05);
+		.block-settings{
+			width: 5rem;
+			float: left;
+			margin-right: 2.5rem;
+			border-top-left-radius: .4rem;
+			border-bottom-left-radius: .4rem;
+			&.main-container-settings{
+				background-color: $darkpurple;
+			}
+			&.modules-container-settings{
+				background-color: $aqua;
+			}
+			> li{
+				text-align: center;
+			}
+		}
+		.modules-container{
+			float: left;
+			/*background-color: green;*/
+			margin: 2.5rem 0;
+			width: calc(100% - 7.5rem);
+			width: -webkit-calc(100% - 7.5rem);
+			width: -moz-calc(100% - 7.5rem);
+			border-radius: .4rem;
+		}
+	}
+}
