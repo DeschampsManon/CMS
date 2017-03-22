@@ -1,0 +1,23 @@
+.modal{
+	padding-top: 5rem;
+	.modal-dialog{
+		.modal-content{
+			border-radius:0;
+			.modal-header{
+				border-bottom: 0 solid transparent;
+				padding-bottom:0;
+			}
+			.modal-body{
+				max-height: 55vh;
+				display:block;
+				overflow:auto;
+			}
+			.modal-footer{
+				border-top: 0 solid transparent;
+				.btn {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

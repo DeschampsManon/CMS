@@ -27,8 +27,10 @@ gem 'puma', '~> 3.0'
 gem 'sqlite3'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-nav'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
 end
 
 group :development do

@@ -1,0 +1,7 @@
+fr:
+    page_builder:
+        layouts:
+            columns_modal:
+                modal_title_insert_column: "Insérer des colonnes"
+            module_container:
+                add_module: "Insérer un/des module/s"
