@@ -5,6 +5,12 @@ function set_layout_config(element){
 	layout_array = layout.split(",");
 }
 
+function get_current_container(element){
+	$(".main-container").removeClass("current-container");
+	element.closest(".main-container").addClass("current-container");
+	console.log(element.attr("class"));
+}
+
 function main_container_settings(e) {
 	e.preventDefault();
 	var $parent = $(this).closest(".main-container")
@@ -12,10 +18,10 @@ function main_container_settings(e) {
 	if($(this).hasClass("delete-main-container")){
 		$parent.remove();
 	} else if($(this).hasClass("duplicate-main-container")){
-		//alert("duplicate");
 		var clone = $parent.clone();
 		$parent.after(clone);
 	}
+	get_current_container($(this));
 }
 
 $(document).off("click", "#page-builder .block-settings a").on("click", "#page-builder .block-settings a", main_container_settings);
@@ -55,15 +61,9 @@ function change_colums_layout(){
   });
 }
 
-function get_current_container(){
-	$(".main-container").removeClass("current-container");
-	$(this).closest(".main-container").addClass("current-container");
-}
-
 $(document).ready(function(){
 	display_columns_list();
 	$("#columns-layout li").click(change_colums_layout);
-	$(".block-settings li").click(get_current_container);
 })
 
 

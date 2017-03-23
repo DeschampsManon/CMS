@@ -8,7 +8,7 @@ class PageBuilderController < ApplicationController
   def change_columns_layout
   	@layout = params[:layout]
   	respond_to do |format|
-      format.js
+      format.js 
     end
   end
 end

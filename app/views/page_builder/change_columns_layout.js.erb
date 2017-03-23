@@ -1,21 +1,9 @@
 $("#column-modal").modal("hide");
 
-var layout = '<%= raw @layout %>';
-var layout_array = [];
 var $parent = $(".current-container .module-container .row");
-
-for (var i = 0; i < layout.length; i++){
-  if ("" + parseInt(layout[i]) != "NaN") {
-  	layout_array.push(layout[i]);
- 	}
-}
 
 $parent.empty();
 
-for (var i = 0; i < layout_array.length; i++) {
-  $parent.append("<%= j render 'page_builder/layouts/module_container' %>");
-}
-  
-
-
-
+<% eval(@layout).each do |layout| %>
+	$parent.append("<%= j render 'page_builder/layouts/module_container', {column_width: layout } %>");
+<% end %>
